@@ -226,3 +226,49 @@ body:has(.image-viewer[open]) { overflow: hidden; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* Home and background updates. Existing project layout rules stay unchanged. */
+.home #intro { grid-template-columns: 1.3fr .8fr; gap: 5rem; padding: 64px 0 72px; min-height: 680px; }
+.home #intro h1 { font-size: clamp(3.2rem, 6vw, 6.2rem); }
+.home #intro p { max-width: 520px; }
+.home #intro .home-eyebrow, .home-eyebrow { color: var(--accent); font-size: .65rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
+.home #intro .home-role { font-size: .95rem; font-weight: 600; color: var(--ink); margin-bottom: .9rem; }
+.home-portrait { margin: 0; padding: 20px 20px 0; max-width: 390px; justify-self: end; background: var(--surface); border: 1px solid var(--line); }
+.home-portrait img { width: 100%; height: auto; }
+.home-portrait figcaption { padding: 1rem 0; font-size: .6rem; line-height: 1.7; letter-spacing: .04em; color: var(--muted); }
+.home .actions { align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.home-primary { background: var(--ink); color: var(--paper); }
+.home-primary:hover { background: var(--accent); border-color: var(--accent); }
+.home-text-link { font-size: .8rem; }
+.home-about, .home-connect { display: grid; grid-template-columns: .6fr 1fr; column-gap: 6rem; padding: 72px 0; border-bottom: 1px solid var(--line); }
+.home-about h2, .home-connect h2 { font-size: clamp(2.2rem, 3.3vw, 3.5rem); max-width: 300px; margin-bottom: 1.5rem; }
+.home-about > div > p:last-child { margin-bottom: 0; }
+.home-skills { padding: 64px 0; }
+.home-skills > header h2 { font-size: 2.8rem; margin-bottom: 2.5rem; }
+.home-skills .row h3 { font-size: 1rem; font-weight: 600; margin: .8rem 0; }
+.home-connect { padding-top: 56px; border-top: 1px solid var(--line); border-bottom: 0; }
+.projects-heading { padding: 64px 0 8px; }
+.projects-heading h1 { margin-bottom: 0; }
+.legacy-message { max-width: 850px; margin: 5rem auto; }
+@media (max-width: 1100px) {
+  .home #intro { column-gap: 2.5rem; min-height: 580px; }
+  .home-about, .home-connect { column-gap: 3rem; }
+}
+@media (max-width: 780px) {
+  .home #intro { column-gap: 2rem; min-height: auto; padding: 48px 0; }
+  .home #intro h1 { font-size: 3.4rem; }
+  .home-portrait { padding: 12px 12px 0; }
+  .home-about, .home-connect { grid-template-columns: 1fr; gap: 1rem; padding: 48px 0; }
+  .home-about h2, .home-connect h2 { max-width: none; }
+  .home-skills { padding: 48px 0; }
+}
+@media (max-width: 600px) {
+  .home #intro { grid-template-columns: 1fr; gap: 2.5rem; }
+  .home #intro h1 { font-size: clamp(2.9rem, 12vw, 4.5rem); }
+  .home #intro .home-role { font-size: .85rem; }
+  .home #intro p { font-size: .9rem; }
+  .home-portrait { justify-self: center; width: min(100%, 340px); }
+  .home .actions { gap: 1rem; }
+  .home-skills > header h2 { font-size: 2.2rem; }
+  .projects-heading { padding: 48px 0 8px; }
+}

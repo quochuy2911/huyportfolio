@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Verify this presentation refresh against the original main-branch content."""
-from collections import Counter
+"""Protect the project archive while validating the Home/background update."""
 from html.parser import HTMLParser
 from pathlib import Path
 import re
@@ -10,6 +9,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = sys.argv[1] if len(sys.argv) > 1 else '6850983fe4b5f6276ad044b6c9fcef2645a98880'
+PROJECT_BASE = 'ddfe3f7afed9ba35351eaab6dd04d9c527eb49da'
 LANDMARKS = {'intro', 'header', 'nav', 'main', 'footer', 'copyright'}
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
@@ -61,22 +61,37 @@ class Page(HTMLParser):
 
 
 original_files = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BASE], cwd=ROOT, text=True).splitlines()
-pages = [name for name in original_files if name.endswith('.html')]
-assert {p.name for p in ROOT.glob('*.html')} == set(pages), 'The original page URLs must remain present'
-image_count = 0
+pages = sorted(p.name for p in ROOT.glob('*.html'))
+assert set(pages) == {name for name in original_files if name.endswith('.html')} | {'projects.html'}, 'Keep all legacy page URLs'
+
+
+def snapshot(name, ref=PROJECT_BASE):
+    return subprocess.check_output(['git', 'show', f'{ref}:{name}'], cwd=ROOT, text=True)
+
+
+def without_navigation(source):
+    return re.sub(r'<ul class="links">[\s\S]*?</ul>', '', source, count=1)
+
+
+protected = [name for name in pages if re.match(r'0[0-6]_', name)]
+for name in protected:
+    assert without_navigation(snapshot(name)) == without_navigation((ROOT / name).read_text()), f'{name}: changes outside shared navigation'
+old_posts = re.search(r'<section class="posts">[\s\S]*?</section>', snapshot('index.html')).group()
+new_posts = re.search(r'<section class="posts">[\s\S]*?</section>', (ROOT / 'projects.html').read_text()).group()
+assert old_posts == new_posts, 'Project listing content or markup changed'
+assert (ROOT / 'assets/css/portfolio.css').read_text().startswith(snapshot('assets/css/portfolio.css')), 'Existing project styles changed'
+assert (ROOT / 'assets/js/portfolio.js').read_text() == snapshot('assets/js/portfolio.js'), 'Existing project interactions changed'
+
 for name in pages:
-    old_source = subprocess.check_output(['git', 'show', f'{BASE}:{name}'], cwd=ROOT, text=True)
     new_source = (ROOT / name).read_text()
-    old, new = Page(old_source), Page(new_source)
-    for key in LANDMARKS:
-        assert old.copy(key) == new.copy(key), f'{name}: original text changed in #{key}'
-    expected_links = ['#main' if name == 'index.html' and link == '#header' else link for link in old.links]
-    assert Counter(expected_links) == Counter(new.links), f'{name}: original links changed'
-    assert old.images == new.images, f'{name}: original photos or their order changed'
-    image_count += len(old.images)
-    old_ga = re.findall(r'<script\b[^>]*>[\s\S]*?</script>', old_source)
-    new_ga = re.findall(r'<script\b[^>]*>[\s\S]*?</script>', new_source)
-    assert old_ga[:2] == new_ga[:2], f'{name}: original Analytics configuration changed'
+    new = Page(new_source)
+    if name != 'aboutme.html':
+        nav = re.search(r'<ul class="links">[\s\S]*?</ul>', new_source).group()
+        assert re.findall(r'href="([^"]+)"', nav) == ['index.html', 'projects.html', 'work_exp.html', 'education.html'], f'{name}: inconsistent navigation'
+        assert 'About Me' not in nav, f'{name}: obsolete About Me tab'
+        old_ga = re.findall(r'<script\b[^>]*>[\s\S]*?</script>', snapshot('index.html'))
+        new_ga = re.findall(r'<script\b[^>]*>[\s\S]*?</script>', new_source)
+        assert old_ga[:2] == new_ga[:2], f'{name}: Analytics configuration changed'
     for resource in new.resources + new.links:
         url = urlsplit(resource)
         if url.scheme or url.netloc:
@@ -86,6 +101,11 @@ for name in pages:
         if url.fragment and target.suffix == '.html':
             assert url.fragment in Page(target.read_text()).ids, f'{name}: missing anchor {resource}'
 
+alias = (ROOT / 'aboutme.html').read_text()
+assert 'content="0; url=index.html#about"' in alias, 'Legacy About Me URL must redirect to Home'
+assert 'about' in Page((ROOT / 'index.html').read_text()).ids, 'Home must include the merged background'
+assert 'class="posts"' not in (ROOT / 'index.html').read_text(), 'Project listing belongs on its own page'
+
 # Original photographs and résumé must remain byte-for-byte unchanged.
 assets = [name for name in original_files if name.startswith(('images/', 'files/'))]
 for name in assets:
@@ -93,5 +113,6 @@ for name in assets:
     new = subprocess.check_output(['git', 'hash-object', str(ROOT / name)], cwd=ROOT, text=True).strip()
     assert old == new, f'Original asset changed: {name}'
 
-print(f'PASS: original text, links, Analytics and {image_count} image placements across {len(pages)} pages')
-print(f'PASS: {len(assets)} original assets, including the résumé, unchanged; local links and resources resolve')
+print('PASS: six project pages, template, listing markup, styles and interactions unchanged except shared navigation')
+print(f'PASS: navigation, Analytics, Home/About redirect and local resources across {len(pages)} pages')
+print(f'PASS: {len(assets)} original assets, including the résumé, remain unchanged')
