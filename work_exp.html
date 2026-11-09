@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-483XGGC9Y9"></script>
@@ -17,16 +17,18 @@
 		</script>
 		<title>Work Experience</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<link rel="icon" href="images/logo2.png" type="image/icon type">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="timeline-page">
+
+		<a class="skip-link" href="#main">Skip to content</a>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
+				<div class="masthead">
 				<!-- Header -->
 					<header id="header">
 						<a href="index.html" class="logo">QH's Making Space</a>
@@ -36,7 +38,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Projects</a></li>
-							<li class="active"><a href="work_exp.html">Working Experience</a></li>
+							<li class="active"><a aria-current="page" href="work_exp.html">Working Experience</a></li>
 							<li><a href="education.html">Education</a></li>
 							<li><a href="aboutme.html">About Me</a></li>
 						</ul>
@@ -45,16 +47,17 @@
 							<li><a href="https://github.com/Qhuy291102" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
+				</div>
 
 				<!-- Main -->
-					<div id="main">
+					<main id="main" tabindex="-1">
 
 						<!-- Post -->
 						<section class="post">
 							<header class="major">
 								<h1>Working Experience</h1>
 							</header>
-							
+
 							<!--Research Assistant-->
 							<header>
 								<h2>Work Study Program: Student Research Assistant</h2>
@@ -64,18 +67,18 @@
 
 							<p><b>Research Project:</b> <a href="05_shm_project.html">Lab Apparatus Design and Machine Learning applied in Structural Health Monitoring</a></p>
 							<p>
-								At Fulbright University Vietnam, I've been working on a research project since April 2022, and mainly worked on the electrics and programming 
+								At Fulbright University Vietnam, I've been working on a research project since April 2022, and mainly worked on the electrics and programming
 								in this project, where I am responsible for the hardware and software communications among sensors, actuators, and Raspberry Pi 4 computer.
 							</p>
 							<p>
-								We focused on making new laboratory device for studying how structures bend. In the first six months, we tried out different setups to create a 
-								system for four-point beam bending experiments. Our setup has a mechanical part with a loading frame, a beam model with support and load points, and an electronic system with sensors for data. 
+								We focused on making new laboratory device for studying how structures bend. In the first six months, we tried out different setups to create a
+								system for four-point beam bending experiments. Our setup has a mechanical part with a loading frame, a beam model with support and load points, and an electronic system with sensors for data.
 							</p>
 							<p>
-								We wanted to make it easy to use, so we added an automated loading mechanism, a simple electrical box, and a better circuit for measuring strain. 
-								We also made sure it can communicate well with sensors and instruments and has a user-friendly interface. The final phase involving in analyzing and predicting structural behavior of materials by applying Machine Learning. 
+								We wanted to make it easy to use, so we added an automated loading mechanism, a simple electrical box, and a better circuit for measuring strain.
+								We also made sure it can communicate well with sensors and instruments and has a user-friendly interface. The final phase involving in analyzing and predicting structural behavior of materials by applying Machine Learning.
 							</p>
-						
+
 							<!--End Reseach Assistant-->
 
 							<!--Teaching Assistant-->
@@ -84,24 +87,24 @@
 								<h4>Fulbright University Vietnam - Part-time Contract</h4>
 								<p>2022 - Current</p>
 							</header>
-							
+
 							<header>
 							<h3>Design and System Thinking Course</h3>
 							<p>Fall 2022, Spring 2023, Fall 2023</p>
 							<ul>
-								<li>Collaborated with instructors to develop and conduct a five-semester workshop series for new students, 
-									focusing on enhancing engineering skills. Covered topics included Safety Orientation, 3D model Digital Design, 
+								<li>Collaborated with instructors to develop and conduct a five-semester workshop series for new students,
+									focusing on enhancing engineering skills. Covered topics included Safety Orientation, 3D model Digital Design,
 									Digital/Manual Fabrication, and Electronics/Arduino.</li>
 								<li>Consult and Support for student's final project in CNC operation, Laser Cutting, 3D Printing, and Handtools.</li>
 								<li>Lead laboratory and discuss sessions.</li>
 							</ul>
 							</header>
-							
+
 							<header>
 								<h3>Sensors, Measurements, and Analysis Course</h3>
 								<p>Fall 2022, Spring 2024</p>
 								<ul>
-									<li>Orchestrated and facilitated immersive workshops in electronics, 3D modeling and simulation, and machine operation, 
+									<li>Orchestrated and facilitated immersive workshops in electronics, 3D modeling and simulation, and machine operation,
 										delivering tangible hands-on learning experiences for students.
 									</li>
 									<li>Teamed up with instructors to elevate course content and enrich learning activities.</li>
@@ -122,7 +125,7 @@
 
 						</section>
 
-					</div>
+					</main>
 
 					<!-- Footer -->
 					<footer id="footer">
@@ -154,11 +157,11 @@
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p>(+84) 83 634 7314</a></p>
+								<p>(+84) 83 634 7314</p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p>ngoquochuy2911@gmail.com</a></p>
+								<p>ngoquochuy2911@gmail.com</p>
 							</section>
 							<section>
 								<h3>Social</h3>
@@ -178,13 +181,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
+		<script src="assets/js/portfolio.js" defer></script>
 	</body>
 	</html>
