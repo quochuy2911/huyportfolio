@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 352" fill="none">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" stroke="#d9d0c0" stroke-opacity=".64"/></pattern>
+    <pattern id="fine" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M5 0H0V5" stroke="#e8e0d2" stroke-width=".5"/></pattern>
+    <marker id="load" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="m0 0 10 5-10 5Z" fill="#a63521"/></marker>
+  </defs>
+  <rect width="560" height="352" fill="#eee8db"/>
+  <rect width="560" height="352" fill="url(#fine)"/>
+  <rect width="560" height="352" fill="url(#grid)"/>
+  <path d="M26 47V26h21m466 0h21v21M26 305v21h21m466 0h21v-21" stroke="#766e62" stroke-width="1.2"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.4" fill="#4b453c">
+    <text x="43" y="49">FIG. 01</text><text x="517" y="49" text-anchor="end">EXPERIMENTAL MECHANICS</text>
+    <text x="43" y="311">FOUR-POINT BENDING</text><text x="517" y="311" text-anchor="end">SCHEMATIC / NOT TO SCALE</text>
+  </g>
+  <path d="M48 171h464" stroke="#776f63" stroke-dasharray="4 5"/>
+  <path d="M64 159h432v25H64z" fill="#fbf8ee" stroke="#292520" stroke-width="2"/>
+  <path d="M82 171h396" stroke="#8c8374" stroke-dasharray="5 5"/>
+  <path d="M112 184 94 214h36zm336 0-18 30h36z" fill="#eee8db" stroke="#292520" stroke-width="1.6"/>
+  <path d="M93 217h38m-32 1-6 7m16-7-6 7m16-7-6 7m16-7-6 7m306 2h38m-32 1-6 7m16-7-6 7m16-7-6 7m16-7-6 7" stroke="#292520" stroke-width="1.4"/>
+  <circle cx="440" cy="220" r="3" stroke="#292520"/><circle cx="456" cy="220" r="3" stroke="#292520"/>
+  <g stroke="#a63521" stroke-width="2.5" marker-end="url(#load)"><path d="M223 100v49"/><path d="M337 100v49"/></g>
+  <path d="M112 240v35m336-35v35m-336-12h336m-336 0 8-3m-8 3 8 3m328-3-8-3m8 3-8 3" stroke="#766e62" stroke-width="1.2"/>
+  <rect x="251" y="252" width="58" height="20" fill="#eee8db"/>
+  <g font-family="monospace" font-size="13" fill="#4b453c" text-anchor="middle">
+    <text x="280" y="267">1.20 m</text><text x="223" y="89" fill="#a63521">P/2</text><text x="337" y="89" fill="#a63521">P/2</text>
+  </g>
+  <g fill="#a63521"><circle cx="141" cy="171" r="2.8"/><circle cx="197" cy="171" r="2.8"/><circle cx="252" cy="171" r="2.8"/><circle cx="280" cy="171" r="2.8"/><circle cx="308" cy="171" r="2.8"/><circle cx="363" cy="171" r="2.8"/><circle cx="419" cy="171" r="2.8"/></g>
+</svg>

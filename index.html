@@ -1,306 +1,140 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-483XGGC9Y9"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects in mechanical design, experimental mechanics, and engineering software by Ngo Quoc Huy, a mechanical designer based in Vietnam.">
+  <meta name="theme-color" content="#f7f4ec">
+  <title>Ngo Quoc Huy · Engineering Portfolio</title>
+  <link rel="canonical" href="https://quochuy2911.github.io/huyportfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ngo Quoc Huy · Engineering Portfolio">
+  <meta property="og:description" content="Projects in mechanical design, experimental mechanics, and engineering software by Ngo Quoc Huy, a mechanical designer based in Vietnam.">
+  <meta property="og:url" content="https://quochuy2911.github.io/huyportfolio/">
+  <meta property="og:image" content="https://quochuy2911.github.io/huyportfolio/assets/media/social-card.jpg">
+  <meta property="og:image:alt" content="Ngo Quoc Huy’s engineering portfolio with a four-point bending schematic">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/media/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/analytics.js" data-measurement-id="G-483XGGC9Y9"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell masthead">
+    <a class="identity" href="#" aria-label="Ngo Quoc Huy, home">
+      <img src="assets/media/favicon.svg" width="34" height="34" alt="">
+      <span>Quoc Huy<span class="identity-note"> / Portfolio</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div></header>
+  <main id="main" tabindex="-1"><div class="shell">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-label"><span class="index-mark"></span> PERSONAL ENGINEERING PORTFOLIO</p>
+        <h1 id="intro-title">Ngo Quoc Huy<span>.</span></h1>
+        <p class="hero-role">Mechanical design &amp; experimental engineering</p>
+        <p class="hero-description">I’m a mechanical designer in Vietnam. I build things, test them, and write software to make sense of what I measure.</p>
+        <div class="hero-actions"><a class="button" href="#work">Explore my work <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"/></svg></a><a class="text-link" href="#about">About me <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div>
+      </div>
+      <figure class="hero-drawing">
+        <img src="assets/media/beam-diagram.svg" alt="Schematic of a simply supported beam with two downward loads and seven strain measurement stations" width="560" height="352" class="" fetchpriority="high" decoding="async">
+        <figcaption><span>FROM THE TEST BENCH</span><span>HCMC, VIETNAM</span></figcaption>
+      </figure>
+    </section>
 
-		gtag('config', 'G-483XGGC9Y9');
-		</script>
-		<title>NQH Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/logo2.png" type="image/icon type">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-head"><div><p class="eyebrow"><span class="accent">01 /</span> PROJECTS</p><h2 id="work-title">Selected work</h2></div>
+      <p>Projects across mechanical design, lab testing, and engineering software.</p></div>
+      <div class="feature-grid"><article class="feature feature-lead">
+    <div class="feature-image image-link">
+      <img src="assets/media/beam-bench.webp" alt="Four-point bending test rig with an aluminum beam and a laptop alongside the frame" width="1280" height="720" class="" loading="lazy" decoding="async">
+    </div>
+    <div class="feature-text">
+      <p class="project-meta"><span class="accent">01</span> <span>Experimental mechanics</span> <span class="meta-year">2026</span></p>
+      <h3><a href="projects/beam-structural-health-monitoring/">Finding damage with sparse strain measurements</a></h3>
+      <p>An instrumented four-point bending rig and a physics-informed model for estimating where a beam has lost stiffness.</p>
+      <ul class="tags" aria-label="Tools and methods"><li>Python</li><li>PyTorch</li><li>Raspberry Pi</li><li>Strain gauges</li><li>Finite elements</li></ul>
+      <span class="text-link" aria-hidden="true">Read project <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+    </div>
+  </article>
+<article class="feature ">
+    <div class="feature-image image-link">
+      <img src="assets/media/mount-cad.webp" alt="CAD assembly of a telescope mounted above an articulated drive" width="1000" height="696" class="" loading="lazy" decoding="async">
+    </div>
+    <div class="feature-text">
+      <p class="project-meta"><span class="accent">02</span> <span>Mechanical design</span> <span class="meta-year">2024</span></p>
+      <h3><a href="projects/astronomical-tracking-mount/">A four-axis mount for astronomical tracking</a></h3>
+      <p>A telescope-mount redesign built around precision gearing, adjustability, and a prototype I could fabricate.</p>
+      <ul class="tags" aria-label="Tools and methods"><li>CAD</li><li>Worm gearing</li><li>Prototyping</li><li>Machining</li></ul>
+      <span class="text-link" aria-hidden="true">Read project <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+    </div>
+  </article>
+<article class="feature ">
+    <div class="feature-image image-link">
+      <img src="assets/media/tolerance-study.svg" alt="Illustrative tolerance study with a pair of surfaces and a simulated result distribution" width="720" height="465" class="" loading="lazy" decoding="async">
+    </div>
+    <div class="feature-text">
+      <p class="project-meta"><span class="accent">03</span> <span>Engineering software</span> <span class="meta-year">2026</span></p>
+      <h3><a href="projects/vsa3d-studio/">VSA3D Studio</a></h3>
+      <p>A personal prototype for exploring how part tolerances contribute to variation in an assembly.</p>
+      <ul class="tags" aria-label="Tools and methods"><li>Monte Carlo</li><li>Tolerance analysis</li><li>CAD geometry</li></ul>
+      <span class="text-link" aria-hidden="true">Read project <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+    </div>
+  </article></div>
+    </section>
 
-	<body class="is-preload">
+    <section class="section archive" id="archive" aria-labelledby="archive-title">
+      <div class="section-head"><div><p class="eyebrow"><span class="accent">02 /</span> EARLIER WORK</p><h2 id="archive-title">Build archive</h2></div>
+      <p>Earlier builds from school and university, from pneumatics to electronics.</p></div>
+      <ul class="archive-list"><li><a href="projects/fingerprint-cabinet-lock/" class="archive-row">
+    <img src="assets/media/fingerprint-case.webp" alt="" width="850" height="850" class="archive-image" loading="lazy" decoding="async">
+    <span class="archive-title">Fingerprint cabinet lock <small>Electronics</small></span>
+    <span class="archive-year">2023</span><svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+  </a></li>
+<li><a href="projects/facility-access-logic/" class="archive-row">
+    <img src="assets/media/logic-simulation.webp" alt="" width="860" height="658" class="archive-image" loading="lazy" decoding="async">
+    <span class="archive-title">Facility access in logic gates <small>Digital logic</small></span>
+    <span class="archive-year">2023</span><svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+  </a></li>
+<li><a href="projects/pneumatic-wood-stabilization/" class="archive-row">
+    <img src="assets/media/wood-machine.webp" alt="" width="900" height="674" class="archive-image" loading="lazy" decoding="async">
+    <span class="archive-title">Pneumatic wood stabilization <small>Pneumatics</small></span>
+    <span class="archive-year">2019–20</span><svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+  </a></li>
+<li><a href="projects/first-telescope-mount/" class="archive-row">
+    <img src="assets/media/early-mount.webp" alt="" width="826" height="1000" class="archive-image" loading="lazy" decoding="async">
+    <span class="archive-title">My first telescope mount <small>Mechanical design</small></span>
+    <span class="archive-year">2018–19</span><svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+  </a></li></ul>
+    </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<div id="intro">
-						<h1>
-							Quoc Huy's<br />
-							Making Space 
-						</h1>
-						<p>Welcome to my making space! Let's go around and enjoy my creations!</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">QH's Making Space</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="work_exp.html">Working Experience</a></li>
-							<li><a href="education.html">Education</a></li>
-							<li><a href="aboutme.html">About Me</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/quochuyngo/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/Qhuy291102" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<!-- <span class="date">April 25, 2017</span> -->
-									<h2>Ngo Quoc Huy</h2>
-									<p style="text-align:left;">
-										I am currently a Junior Mechatronics Engineering student at <a href="https://fulbright.edu.vn/">Fulbright University Vietnam </a>, 
-										with strong interest in Mechanical Design, Embedded Systems, and Robotics. The majority of 
-										my experience has involved building some student's project-based learning which are 
-										multi-disciplinary engineering aspects, mostly focus on creating and optimizing 
-										the automation process.
-									</p>
-									<p style="text-align:left;">
-										This website serves as an online portfolio so that I can publically share about my passion of pursuing an 
-										amazing and proffessional engineering career. Welcome to my world where, hopefully, you might find some 
-										interesting projects or an inspring engineer's friend!  
-									</p>
-									<p style="text-align:left;">
-										Cheers, <br />
-										Huy
-									</p>
-								</header>
-								<!-- <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a> -->
-								<!-- <ul class="actions special">
-									<li><a href="aboutme.html" class="button large">Details</a></li>
-								</ul> -->
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-
-								<article>
-									<header>
-										<span class="date">Spring 2024 - Junior Student - University</span>
-										<h2><a href="06_eqmount_mechdes.html"> 4-DOF Robotic Arm for Astronomical Objects Autotracking
-										</a></h2>
-									</header>
-									<a href="06_eqmount_mechdes.html" class="image fit"><img src="images/eqmount_mechdes_corver.png" alt="" /></a>
-									<p>
-										This is my personal project for the Mechanical Design course, and it’s also an improved version of <a href="01_nirvana_interference_telescope.html"> 
-										a project </a> I made during my high school.
-										As its name suggests, the device is a mechanical robotic arm with 4-DOF (degrees of freedom) so that it can simulate the motion of the Earth 
-										to navigate the telescope and stay fixed on any astronomical objects automatically. By applying the properties of anti backlash worm gear 
-										for driven mechanism, the motion resolution of the robotic arm is extremely small, up to 1.116 arcsecond (~ 0.00031 degree), so that it 
-										can keep any space objects within the telescope’s view for all day. The whole mechanical system will be controlled by an electrical box, 
-										it’s also my another upcoming project after this one.     
-									</p>
-
-									<ul class="actions special">
-										<li><a href="06_eqmount_mechdes.html" class="button">More Images</a></li>
-									</ul>
-									
-								</article>
-								
-								<article>
-									<header>
-										<span class="date">2023 - University Research Project</span>
-										<h2><a href="05_shm_project.html"> Lab Apparatus Design and Machine Learning applied in Structural Health Monitoring
-										</a></h2>
-									</header>
-									<a href="05_shm_project.html" class="image fit"><img src="images/shm_cover.jpg" alt="" /></a>
-									<p>
-										This is a group research project launched since April 2022, focusing on designing a 
-										laboratory apparatus for experimental structural analysis. The system includes an automatic loading 
-										frame for beam bending, a metal beam model with supports and load points, and an removable electrical 
-										box with integrated sensors and data acquisition system. I mainly worked on the electrics and programming 
-										in this project, where I am responsible for the hardware and software communications among sensors, 
-										actuators, and Raspberry Pi 4 computer.   
-									</p>
-
-									<ul class="actions special">
-										<li><a href="05_shm_project.html" class="button">More Images</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<span class="date">Fall 2023 - Junior Student - University</span>
-										<h2><a href="04_fsm_facility_management.html"> Basic Facility Management Machine using Logic Gates (CircuitVerse Simulation) 
-										</a></h2>
-									</header>
-									<a href="04_fsm_facility_management.html" class="image fit"><img src="images/fsm_facility_manag.png" alt="" /></a>
-									<p>
-										This is the term-project for Computer Organization course in my university. I created a simple computer 
-										using logic gates and Finite-state Moore machine on CircuitVerse, which can store the student’s information 
-										for verifying to access the university’s facilities within limited slots and duration. This is a project-based 
-										learning to apply the knowledge of finite state machine and logic gates from the course into real-life problem. 
-									</p>
-
-									<ul class="actions special">
-										<li><a href="04_fsm_facility_management.html" class="button">More Images</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<span class="date">Spring 2023 - Junior Student - University</span>
-										<h2><a href="03_fingerprint.html"> Fingerprint Cabinet Lock
-										</a></h2>
-									</header>
-									<a href="03_fingerprint.html" class="image fit"><img src="images/fingerprint_lock_cover.jpg" alt="" /></a>
-									<p>
-										This is my final project in the Electrical Circuits and Devices course, in which I was introduced to the PCB 
-										(Printed Circuit Board) design and fabrication using Altium Designer application. This device is a electrical 
-										cabinet lock that can store up to 127 different fingerprint models and other modification modes for users, 
-										such as Admin mode to add new or remove registered fingerprints. Our team designed a particular PCB to handle 
-										all the electrical components using Altium Designer, then tried to come up with a final product with 
-										industrial-standard packaging and testing.    
-									</p>
-
-									<ul class="actions special">
-										<li><a href="03_fingerprint.html" class="button">More Images</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<span class="date">Fall 2019 - High School</span>
-										<h2><a href="02_wood_stabilizing.html"> Automatic Wood's Cellular Stabilizing System Applying Pneumatic Control 
-										</a></h2>
-									</header>
-									<a href="02_wood_stabilizing.html" class="image fit"><img src="images/wood_stabilizing_cover.jpg" alt="" /></a>
-									<p>
-										This is a personal project I made in my last year of high school, which winned the 1st place of 
-										Provincial Science and Engineering Fair 2020. Wood cellular structure will be impreganted with epoxy resin 
-										to increase their dimensional stability and change the wood’s properties under pressure and vacuum. 
-										Regard to this manual wood stabilizing technique, the project aims to turn the entire human-depended 
-										process into automatic production chain based on pneumatic valves and electrical control. 
-									</p>
-
-									<ul class="actions special">
-										<li><a href="02_wood_stabilizing.html" class="button">More Images</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<span class="date">Fall 2018 - High School</span>
-										<h2><a href="01_nirvana_interference_telescope.html">Telescope Guiding Mount based on Astronomical Coordinate Systems 
-										</a></h2>
-									</header>
-									<a href="01_nirvana_interference_telescope.html" class="image fit"><img src="images/nirvana_cover.jpg" alt="" /></a>
-									<p>
-										The first engineering project I’ve made during my high school and winned the 4th place 
-										of National Science and Engineering Fair 2019. This project serves as a simulation of astronomical 
-										coordinate system, naviagting telescope to any space objects based on their coordinates. 
-										The most heavy part is mechanical design, I have to design a mechanical system 
-										for precise and stable gear driven on two axes. Then, controlled by two stepper motors for real-time 
-										adjustment of telescope’s view. At the end, I could control the telescope throught my laptop’s screen 
-										and it worked smoothly, but there is room for improvement, such as simplified 
-										the initial setups for user and it is excellent to save all required data into the electrical box 
-										instead of bring along a laptop with internet connection for each time.
-									</p>
-
-									<ul class="actions special">
-										<li><a href="01_nirvana_interference_telescope.html" class="button">More Images</a></li>
-									</ul>
-								</article>
-
-							</section>
-
-						<!-- Footer -->  <!--Temporary Off-->
-							<!-- <footer> 
-								<div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer> -->
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- <section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section> -->
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p> Ho Chi Minh city, Vietnam</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p>(+84) 83 634 7314</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>ngoquochuy2911@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/quochuyngo/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/Qhuy291102" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li> My Personal Portfolio</li><li>Passionate Engineer</li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="section-head"><div><p class="eyebrow"><span class="accent">03 /</span> BACKGROUND</p><h2 id="about-title">A bit about me</h2></div></div>
+      <div class="about-grid">
+        <figure class="portrait"><img src="assets/media/portrait.webp" alt="Ngo Quoc Huy" width="492" height="492" class="" loading="lazy" decoding="async"><figcaption>Ngo Quoc Huy · Ho Chi Minh City</figcaption></figure>
+        <div class="about-copy">
+          <p>I started building engineering projects in high school. One of my first was a motorized telescope mount. I came back to that design in university with better tools and a clearer idea of what I wanted to improve.</p>
+          <p>Today I’m a Mechanical Designer at Bosch Automotive R&amp;D Center Vietnam. I’m interested in how mechanical design, sensing, and computation can work together to make automotive and aerospace systems more reliable.</p>
+        </div>
+      </div>
+      <div class="background-grid">
+        <section class="background-column" id="experience" aria-labelledby="experience-title">
+          <h3 id="experience-title">Experience &amp; education</h3>
+          <ul class="timeline"><li><span class="timeline-date">Current</span><div><h4>Mechanical Designer</h4><p class="organization">Bosch Automotive R&amp;D Center Vietnam</p><p>I work on mechanical drawings, design documentation, and product improvement in automotive R&amp;D. My earlier experience at Bosch also included test-bench work and engineering data analysis.</p></div></li><li><span class="timeline-date">2026</span><div><h4>Human-centered Engineering</h4><p class="organization">Fulbright University Vietnam</p><p>I graduated with honors. My capstone on physics-informed beam damage identification earned Capstone Honors.</p></div></li><li><span class="timeline-date">2022–24</span><div><h4>Research and teaching assistant</h4><p class="organization">Fulbright University Vietnam</p><p>I contributed to the beam-bending research apparatus and supported hands-on coursework in fabrication, electronics, and measurement.</p></div></li></ul>
+        </section>
+        <section class="background-column" aria-labelledby="skills-title">
+          <h3 id="skills-title">Tools &amp; methods</h3>
+          <dl class="skills"><div><dt>Mechanical design</dt><dd>CAD assemblies, engineering drawings, tolerance analysis, and designing parts for fabrication.</dd></div><div><dt>Testing and instrumentation</dt><dd>Strain gauges, load measurement, motor control, Raspberry Pi, and bench data acquisition.</dd></div><div><dt>Engineering computation</dt><dd>Python, PyTorch, finite-element modeling, physics-informed learning, and analysis of measured signals.</dd></div></dl>
+        </section>
+      </div>
+    </section>
+  </div></main>
+  <footer class="site-footer" id="contact"><div class="shell footer-inner">
+    <div><p class="eyebrow"><span class="accent">04 /</span> CONTACT</p>
+    <h2>Say hello.</h2><p>Find me on GitHub or LinkedIn.</p></div>
+    <div class="socials"><a href="https://github.com/quochuy2911">GitHub <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="https://www.linkedin.com/in/quochuyngo/">LinkedIn <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </div><div class="shell footer-base"><span>Ngo Quoc Huy</span><span>Ho Chi Minh City, Vietnam</span><a href="#top">Back to top ↑</a></div></footer>
+</body>
 </html>

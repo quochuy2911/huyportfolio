@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An instrumented four-point bending rig and a physics-informed model for estimating where a beam has lost stiffness.">
+  <meta name="theme-color" content="#f7f4ec">
+  <title>Finding damage with sparse strain measurements · Ngo Quoc Huy</title>
+  <link rel="canonical" href="https://quochuy2911.github.io/huyportfolio/projects/beam-structural-health-monitoring/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Finding damage with sparse strain measurements · Ngo Quoc Huy">
+  <meta property="og:description" content="An instrumented four-point bending rig and a physics-informed model for estimating where a beam has lost stiffness.">
+  <meta property="og:url" content="https://quochuy2911.github.io/huyportfolio/projects/beam-structural-health-monitoring/">
+  <meta property="og:image" content="https://quochuy2911.github.io/huyportfolio/assets/media/social-card.jpg">
+  <meta property="og:image:alt" content="Ngo Quoc Huy’s engineering portfolio with a four-point bending schematic">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../assets/media/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script defer src="../../assets/analytics.js" data-measurement-id="G-483XGGC9Y9"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell masthead">
+    <a class="identity" href="../../" aria-label="Ngo Quoc Huy, home">
+      <img src="../../assets/media/favicon.svg" width="34" height="34" alt="">
+      <span>Quoc Huy<span class="identity-note"> / Portfolio</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="../../#work">Work</a><a href="../../#about">About</a><a href="../../#contact">Contact</a>
+    </nav>
+  </div></header>
+  <main id="main" tabindex="-1"><div class="shell detail">
+    <header class="detail-head">
+      <a class="back-link text-link" href="../../#work"><span aria-hidden="true">←</span> Selected work</a>
+      <p class="eyebrow"><span class="accent">Experimental mechanics</span> / 2026</p>
+      <h1>Finding damage with sparse strain measurements</h1>
+      <p class="detail-summary">An instrumented four-point bending rig and a physics-informed model for estimating where a beam has lost stiffness.</p>
+      <div class="detail-links"><a class="button" href="https://github.com/quochuy2911/Fulbright_SHM_PINN">Research code on GitHub <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+    </header>
+    <figure class="detail-cover ">
+      <img src="../../assets/media/beam-bench.webp" alt="Four-point bending test rig with an aluminum beam and a laptop alongside the frame" width="1280" height="720" class="" fetchpriority="high" decoding="async">
+      <figcaption>The Fulbright beam-bending apparatus during its development.</figcaption>
+    </figure>
+    <dl class="project-facts"><div><dt>Support span</dt><dd>1.2 m</dd></div><div><dt>Strain gauges</dt><dd>14</dd></div><div><dt>Stiffness segments</dt><dd>7</dd></div></dl>
+    <div class="case-grid">
+      <aside class="case-aside"><h2>My role</h2><p>Capstone researcher and contributor to the test bench’s instrumentation and control.</p><h2>Tools &amp; methods</h2><ul class="tags" aria-label="Tools and methods"><li>Python</li><li>PyTorch</li><li>Raspberry Pi</li><li>Strain gauges</li><li>Finite elements</li></ul></aside>
+      <div class="case-copy"><section><h2>The question</h2><p>If sensors are installed before a structure is damaged, can a sparse set of measurements help locate a loss of stiffness? I used a simply supported aluminum beam in four-point bending so the mechanics and loading were well defined.</p></section><section><h2>From bench to model</h2><p>I worked on the electronics and software connecting the sensors, actuators, and Raspberry Pi. For the capstone, I used paired strain gauges on the top and bottom of the beam at seven stations. The forward model reconstructed beam response from sparse measurements, while the inverse model used a differentiable beam solver to estimate stiffness across seven segments.</p></section><section><h2>What the experiment showed</h2><p>In a test with a machined pocket in Segment 5, the inverse model identified a stiffness reduction in that segment and also flagged an undamaged segment. The result shows where the method was informative and where it remained ambiguous. The estimated stiffness loss describes the beam’s response at segment scale.</p></section></div>
+    </div>
+    <section class="gallery" aria-labelledby="gallery-title"><h2 id="gallery-title">From the build</h2><div class="gallery-grid"><figure><a class="image-link" href="../../assets/media/beam-controls.webp" aria-label="Open image: Instrumentation and control setup"><img src="../../assets/media/beam-controls.webp" alt="The instrumentation box and control interface on the bending apparatus" width="563" height="1000" class="" loading="lazy" decoding="async"></a><figcaption>Instrumentation and control setup</figcaption></figure><figure><a class="image-link" href="../../assets/media/beam-machining.webp" aria-label="Open image: Machining during apparatus development"><img src="../../assets/media/beam-machining.webp" alt="A workpiece being machined on a CNC mill during apparatus development" width="920" height="690" class="" loading="lazy" decoding="async"></a><figcaption>Machining during apparatus development</figcaption></figure></div></section>
+  </div></main>
+  <footer class="site-footer" id="contact"><div class="shell footer-inner">
+    <div><p class="eyebrow"><span class="accent">04 /</span> CONTACT</p>
+    <h2>Say hello.</h2><p>Find me on GitHub or LinkedIn.</p></div>
+    <div class="socials"><a href="https://github.com/quochuy2911">GitHub <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="https://www.linkedin.com/in/quochuyngo/">LinkedIn <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </div><div class="shell footer-base"><span>Ngo Quoc Huy</span><span>Ho Chi Minh City, Vietnam</span><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>

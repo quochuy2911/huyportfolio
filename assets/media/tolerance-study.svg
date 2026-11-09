@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 465" fill="none">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#dcd4c7"/></pattern>
+    <marker id="dim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m1 1 8 4-8 4" stroke="#a63521"/></marker>
+  </defs>
+  <rect width="720" height="465" fill="#eee8db"/><rect width="720" height="465" fill="url(#grid)"/>
+  <path d="M31 63V31h32m594 0h32v32M31 402v32h32m594 0h32v-32" stroke="#766e62"/>
+  <g font-family="monospace" font-size="15" letter-spacing="2" fill="#514b41"><text x="52" y="60">INPUT GEOMETRY</text><text x="668" y="60" text-anchor="end">ILLUSTRATIVE STUDY</text><text x="52" y="412">PLANE DISTANCE</text><text x="668" y="412" text-anchor="end">SAMPLED DISTRIBUTION</text></g>
+  <path d="m79 186 114-59 138 55-112 63z" fill="#f8f3e8" stroke="#2c2923" stroke-width="2"/>
+  <path d="m79 267 114-59 138 55-112 63z" fill="#ded3bf" fill-opacity=".75" stroke="#2c2923" stroke-width="2"/>
+  <path d="M108 198v80m171-67v82" stroke="#6e6659" stroke-dasharray="5 6"/>
+  <path d="M239 235v79" stroke="#a63521" stroke-width="2" marker-start="url(#dim)" marker-end="url(#dim)"/>
+  <text x="251" y="275" font-family="monospace" font-size="16" fill="#a63521">d</text>
+  <path d="M386 145v170h270" stroke="#2c2923" stroke-width="1.5"/>
+  <g fill="#a63521"><rect x="408" y="303" width="19" height="11" opacity=".35"/><rect x="431" y="285" width="19" height="29" opacity=".52"/><rect x="454" y="252" width="19" height="62" opacity=".66"/><rect x="477" y="213" width="19" height="101" opacity=".79"/><rect x="500" y="174" width="19" height="140"/><rect x="523" y="186" width="19" height="128"/><rect x="546" y="225" width="19" height="89" opacity=".77"/><rect x="569" y="260" width="19" height="54" opacity=".64"/><rect x="592" y="288" width="19" height="26" opacity=".49"/><rect x="615" y="302" width="19" height="12" opacity=".35"/></g>
+</svg>
